@@ -1,13 +1,13 @@
 <!-- leleure // animated profile — custom SVGs, hacker theme (black/grey/white hat) -->
 <div align="center">
 
-<img src="./banner.svg" width="860" alt="L3L3UR3" />
+<img src="./header.svg" width="860" alt="L3L3UR3" />
 
 <br><br>
 
 <h3><code>leleure@github ~ $ ./whoami.sh</code></h3>
 
-<img src="./card.svg" width="860" alt="whoami neofetch card" />
+<img src="./whoami.svg" width="860" alt="whoami neofetch card" />
 
 <br><br>
 
