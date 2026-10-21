@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 200" width="860" height="200" role="img" aria-label="L3L3UR3 terminal banner">
+  <defs>
+    <style>
+      @keyframes wipe { from { transform: translateX(0); } to { transform: translateX(600px); } }
+      @keyframes blink { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
+      @keyframes glitchR { 0%,92%,100% { opacity:0; transform:translate(0,0);} 93%{opacity:.8;transform:translate(3px,-2px);} 96%{opacity:.6;transform:translate(-2px,1px);} }
+      @keyframes glitchC { 0%,90%,100% { opacity:0; transform:translate(0,0);} 91%{opacity:.8;transform:translate(-3px,2px);} 95%{opacity:.5;transform:translate(2px,-1px);} }
+      @keyframes subin { from { opacity:0; transform:translateY(8px);} to { opacity:1; transform:translateY(0);} }
+      .title { font: 700 76px "Courier New", ui-monospace, monospace; letter-spacing: 4px; }
+      .sub   { font: 400 18px "Courier New", ui-monospace, monospace; }
+      .chrome{ font: 400 12px "Courier New", ui-monospace, monospace; fill:#8b949e; }
+      #wipe  { animation: wipe 1.3s cubic-bezier(.7,0,.3,1) .3s forwards; }
+      #gr    { animation: glitchR 4s steps(1) 1.6s infinite; }
+      #gc    { animation: glitchC 4s steps(1) 1.6s infinite; }
+      #sub   { opacity:0; animation: subin .6s ease 1.5s forwards; }
+      #cur   { animation: blink 1s steps(1) infinite; }
+    </style>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#39d353" stop-opacity="0"/>
+      <stop offset="1" stop-color="#39d353" stop-opacity=".04"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="858" height="198" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="1" y="1" width="858" height="198" rx="14" fill="url(#scan)"/>
+
+  <!-- window chrome -->
+  <rect x="1" y="1" width="858" height="34" rx="14" fill="#161b22"/>
+  <rect x="1" y="20" width="858" height="15" fill="#161b22"/>
+  <circle cx="24" cy="18" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="18" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="18" r="6" fill="#27c93f"/>
+  <text x="430" y="22" text-anchor="middle" class="chrome">zsh — leleure@blackbox: ~</text>
+  <line x1="1" y1="35" x2="859" y2="35" stroke="#30363d" stroke-width="1"/>
+
+  <!-- title with glitch layers -->
+  <g transform="translate(40,128)">
+    <text id="gc" class="title" fill="#2de2e6">L3L3UR3</text>
+    <text id="gr" class="title" fill="#ff2d55">L3L3UR3</text>
+    <text class="title" fill="#39d353">L3L3UR3</text>
+  </g>
+
+  <!-- left-to-right reveal overlay + printing cursor -->
+  <g id="wipe">
+    <rect x="40" y="62" width="600" height="82" fill="#0d1117"/>
+    <rect x="36" y="62" width="4" height="82" fill="#39d353"/>
+  </g>
+
+  <!-- subtitle -->
+  <text id="sub" x="42" y="176" class="sub" fill="#7ee787">
+    // offensive security · OSINT · grey hat<tspan id="cur" fill="#39d353"> ▋</tspan>
+  </text>
+</svg>
