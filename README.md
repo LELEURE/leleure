@@ -17,6 +17,11 @@
 
 <br><br>
 
+<img src="https://img.shields.io/badge/CompTIA-Pentest%2B-cf0a1e?style=for-the-badge&logo=comptia&logoColor=white&labelColor=0a0a0a" />
+<img src="https://img.shields.io/badge/TryHackMe-Jr%20Penetration%20Tester-cf0a1e?style=for-the-badge&logo=tryhackme&logoColor=white&labelColor=0a0a0a" />
+
+<br><br>
+
 <h3><code>leleure@github ~ $ cat ./contributions.sh</code></h3>
 
 <picture>
