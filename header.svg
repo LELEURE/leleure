@@ -70,8 +70,7 @@
   <circle class="eyecore" cx="91.2" cy="113.0" r="4.5" fill="#ffe3e3"/>
   <circle class="eye" cx="148.8" cy="113.0" r="13" fill="#ff0a1e" filter="url(#eyeglow)"/>
   <circle class="eyecore" cx="148.8" cy="113.0" r="4.5" fill="#ffe3e3"/>
-  <g class="drip" style="animation-delay:2.6s" transform="translate(91.2,124.0)"><rect x="-1.2" y="0" width="2.4" height="40" fill="#8a000e"/><circle cx="0" cy="40" r="2.8" fill="#ff1326"/></g>
-  <g class="drip" style="animation-delay:4.0s" transform="translate(148.8,124.0)"><rect x="-1.2" y="0" width="2.4" height="40" fill="#8a000e"/><circle cx="0" cy="40" r="2.8" fill="#ff1326"/></g>
+
   </g></g>
 
   <g transform="translate(430,0)">

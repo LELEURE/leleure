@@ -11,6 +11,12 @@
 
 <br><br>
 
+<h3><code>leleure@github ~ $ ./tryhackme.sh</code></h3>
+
+<img src="https://tryhackme-badges.s3.amazonaws.com/LELEURE.png" alt="TryHackMe LELEURE" />
+
+<br><br>
+
 <h3><code>leleure@github ~ $ cat ./contributions.sh</code></h3>
 
 <picture>
