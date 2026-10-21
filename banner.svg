@@ -2,22 +2,22 @@
   <defs>
     <style>
       @keyframes flashout { 0%{opacity:1;} 12%{opacity:1;} 100%{opacity:0;} }
-      @keyframes slam     { 0%{transform:scale(1.14);opacity:0;} 10%{opacity:1;} 55%{transform:scale(.985);} 100%{transform:scale(1);opacity:1;} }
+      @keyframes slam     { 0%{transform:scale(1.12);opacity:0;} 10%{opacity:1;} 55%{transform:scale(.99);} 100%{transform:scale(1);opacity:1;} }
       @keyframes flick    { 0%,93%,100%{opacity:0;} 94%{opacity:.10;} 96%{opacity:.03;} 98%{opacity:.08;} }
-      @keyframes strobe   { 0%,96%,100%{opacity:0;} 97%{opacity:.22;} 98%{opacity:0;} 99%{opacity:.16;} }
-      @keyframes eyepulse { 0%,100%{opacity:.75;} 50%{opacity:1;} }
-      @keyframes corepulse{ 0%,100%{opacity:.5;} 50%{opacity:.95;} }
+      @keyframes strobe   { 0%,96%,100%{opacity:0;} 97%{opacity:.20;} 98%{opacity:0;} 99%{opacity:.14;} }
+      @keyframes eyepulse { 0%,100%{opacity:.78;} 50%{opacity:1;} }
+      @keyframes corepulse{ 0%,100%{opacity:.45;} 50%{opacity:.9;} }
       @keyframes blink    { 0%,58%{opacity:1;} 59%,100%{opacity:.32;} }
       @keyframes curblink { 0%,49%{opacity:1;} 50%,100%{opacity:0;} }
       @keyframes glitchR  { 0%,90%,100%{opacity:0;transform:translate(0,0);} 91%{opacity:.9;transform:translate(5px,-3px);} 94%{opacity:.6;transform:translate(-4px,2px);} }
       @keyframes glitchC  { 0%,88%,100%{opacity:0;transform:translate(0,0);} 89%{opacity:.9;transform:translate(-5px,3px);} 93%{opacity:.5;transform:translate(3px,-2px);} }
-      @keyframes drip     { 0%{transform:scaleY(0);} 8%{transform:scaleY(0);} 55%{transform:scaleY(1);} 90%{transform:scaleY(1);opacity:1;} 100%{transform:scaleY(1);opacity:0;} }
+      @keyframes drip     { 0%{transform:scaleY(0);} 10%{transform:scaleY(0);} 60%{transform:scaleY(1);} 92%{transform:scaleY(1);opacity:1;} 100%{transform:scaleY(1);opacity:0;} }
       @keyframes titin    { from{opacity:0;} to{opacity:1;} }
-      .bone  { font:700 14px "Courier New",ui-monospace,monospace; fill:#c9d2d6; white-space:pre; letter-spacing:0; }
-      .skull { animation: slam 1s cubic-bezier(.2,.8,.2,1) .18s both; transform-origin:130px 150px; transform-box:fill-box; }
-      .eye    { animation: eyepulse 1.25s ease-in-out infinite; }
-      .eyecore{ animation: corepulse 1.25s ease-in-out infinite; }
-      .drip   { transform-origin: top; animation: drip 5s ease-in infinite; }
+      .bone  { font:400 16px "Courier New",ui-monospace,monospace; fill:#cdd6da; white-space:pre; }
+      .skull { animation: slam 1s cubic-bezier(.2,.8,.2,1) .18s both; transform-origin:center; transform-box:fill-box; }
+      .eye    { animation: eyepulse 1.2s ease-in-out infinite; }
+      .eyecore{ animation: corepulse 1.2s ease-in-out infinite; }
+      .drip   { transform-origin: top; animation: drip 5.5s ease-in infinite; }
       .title { font:800 58px "Courier New",ui-monospace,monospace; letter-spacing:2px; }
       .breach{ font:800 20px "Courier New",ui-monospace,monospace; letter-spacing:3px; }
       .meta  { font:400 16px "Courier New",ui-monospace,monospace; }
@@ -34,8 +34,8 @@
       <stop offset="40%" stop-color="#000000" stop-opacity="0"/>
       <stop offset="100%" stop-color="#4a0010" stop-opacity="0.9"/>
     </radialGradient>
-    <filter id="eyeglow" x="-200%" y="-200%" width="500%" height="500%">
-      <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="eyeglow" x="-300%" y="-300%" width="700%" height="700%">
+      <feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <pattern id="scan" width="3" height="3" patternUnits="userSpaceOnUse"><rect width="3" height="1.4" fill="#000" opacity="0.55"/></pattern>
   </defs>
@@ -43,39 +43,37 @@
   <rect x="0" y="0" width="860" height="392" rx="14" fill="#05070a"/>
   <rect x="0" y="0" width="860" height="392" rx="14" fill="url(#vig)"/>
 
-  <!-- status line -->
   <circle cx="22" cy="20" r="5" fill="#ff1326"/>
   <text x="38" y="25" class="chrome" fill="#ff4d60">root@blackbox: ~ // 1 intruder detected — trace active</text>
   <line x1="0" y1="40" x2="860" y2="40" stroke="#3d0b12" stroke-width="1"/>
 
-  <!-- skull -->
-  <g transform="translate(48,94)"><g class="skull">
-    <text class="bone" x="0" y="0">          __________          </text>
-    <text class="bone" x="0" y="18">       .-'          '-.       </text>
-    <text class="bone" x="0" y="36">      /                \      </text>
-    <text class="bone" x="0" y="54">     /                  \     </text>
-    <text class="bone" x="0" y="72">    |   .------..------.   |   </text>
-    <text class="bone" x="0" y="90">    |  /        \        \  |  </text>
-    <text class="bone" x="0" y="108">    | |         ||         | | </text>
-    <text class="bone" x="0" y="126">    | |         ||         | | </text>
-    <text class="bone" x="0" y="144">    |  \        /\        /  |  </text>
-    <text class="bone" x="0" y="162">    |   '------'  '------'   |  </text>
-    <text class="bone" x="0" y="180">    |          /\/\          |  </text>
-    <text class="bone" x="0" y="198">     \         \  /         /   </text>
-    <text class="bone" x="0" y="216">      \         \/         /    </text>
-    <text class="bone" x="0" y="234">       '.                .'     </text>
-    <text class="bone" x="0" y="252">         '.            .'       </text>
-    <text class="bone" x="0" y="270">           |  |  |  |  |        </text>
-    <text class="bone" x="0" y="288">           |__|__|__|__|        </text>
-  <circle class="eye" cx="96.9" cy="103.4" r="11" fill="#ff0a1e" filter="url(#eyeglow)"/>
-  <circle class="eyecore" cx="96.9" cy="103.4" r="4" fill="#ffd0d0"/>
-  <circle class="eye" cx="189.6" cy="103.4" r="11" fill="#ff0a1e" filter="url(#eyeglow)"/>
-  <circle class="eyecore" cx="189.6" cy="103.4" r="4" fill="#ffd0d0"/>
-  <g class="drip" style="animation-delay:2.5s" transform="translate(96.9,112.4)"><rect x="-1.1" y="0" width="2.2" height="34" fill="#9e0010"/><circle cx="0" cy="34" r="2.6" fill="#ff1326"/></g>
-  <g class="drip" style="animation-delay:3.8s" transform="translate(189.6,112.4)"><rect x="-1.1" y="0" width="2.2" height="34" fill="#9e0010"/><circle cx="0" cy="34" r="2.6" fill="#ff1326"/></g>
+  <g transform="translate(60,70)"><g class="skull">
+    <text class="bone" x="0" y="0.0">        ▓████████▓</text>
+    <text class="bone" x="0" y="14.7">      ▓████████████▓</text>
+    <text class="bone" x="0" y="29.4">     ▓██████████████▓</text>
+    <text class="bone" x="0" y="44.2">    ▓████████████████▓</text>
+    <text class="bone" x="0" y="58.9">    ▓████████████████▓</text>
+    <text class="bone" x="0" y="73.6">    ▓████████████████▓</text>
+    <text class="bone" x="0" y="88.3">    ▓████████████████▓</text>
+    <text class="bone" x="0" y="103.0">    ▓██▓    ▓▓    ▓██▓</text>
+    <text class="bone" x="0" y="117.8">    ▓██▓    ▓▓    ▓██▓</text>
+    <text class="bone" x="0" y="132.5">    ▓██▓    ▓▓    ▓██▓</text>
+    <text class="bone" x="0" y="147.2">    ▓████████████████▓</text>
+    <text class="bone" x="0" y="161.9">    ▓████████████████▓</text>
+    <text class="bone" x="0" y="176.6">    ▓██████▓  ▓██████▓</text>
+    <text class="bone" x="0" y="191.4">     ▓█████▓  ▓█████▓</text>
+    <text class="bone" x="0" y="206.1">      ▓████████████▓</text>
+    <text class="bone" x="0" y="220.8">      ▓█ ██ ██ ██ █▓</text>
+    <text class="bone" x="0" y="235.5">      ▓█ ██ ██ ██ █▓</text>
+    <text class="bone" x="0" y="250.2">        ▓████████▓</text>
+  <circle class="eye" cx="52.8" cy="113.0" r="13" fill="#ff0a1e" filter="url(#eyeglow)"/>
+  <circle class="eyecore" cx="52.8" cy="113.0" r="4.5" fill="#ffe3e3"/>
+  <circle class="eye" cx="187.2" cy="113.0" r="13" fill="#ff0a1e" filter="url(#eyeglow)"/>
+  <circle class="eyecore" cx="187.2" cy="113.0" r="4.5" fill="#ffe3e3"/>
+  <g class="drip" style="animation-delay:2.6s" transform="translate(52.8,124.0)"><rect x="-1.2" y="0" width="2.4" height="40" fill="#8a000e"/><circle cx="0" cy="40" r="2.8" fill="#ff1326"/></g>
+  <g class="drip" style="animation-delay:4.0s" transform="translate(187.2,124.0)"><rect x="-1.2" y="0" width="2.4" height="40" fill="#8a000e"/><circle cx="0" cy="40" r="2.8" fill="#ff1326"/></g>
   </g></g>
 
-  <!-- right block -->
   <g transform="translate(430,0)">
     <g transform="translate(0,170)">
       <text id="gc" class="title" fill="#19d3e6">L3L3UR3</text>
@@ -87,7 +85,6 @@
     <text class="meta" x="2" y="276" fill="#5a636b">offensive security · OSINT · grey hat</text>
   </g>
 
-  <!-- overlays -->
   <rect x="0" y="40" width="860" height="352" fill="url(#scan)" pointer-events="none"/>
   <rect id="strobe" opacity="0" x="0" y="0" width="860" height="392" rx="14" fill="#ff0012" pointer-events="none"/>
   <rect id="flick" opacity="0" x="0" y="0" width="860" height="392" rx="14" fill="#ff1a2e" pointer-events="none"/>
