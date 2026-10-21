@@ -59,7 +59,7 @@
     <circle class="eye" cx="76"  cy="119" r="6" fill="#ff2d55" filter="url(#eyeglow)"/>
     <circle class="eye" cx="135" cy="119" r="6" fill="#ff2d55" filter="url(#eyeglow)"/>
     <text id="threat" class="art" y="212" fill="#ff2d55" opacity="1">    [ THREAT ACTOR DETECTED ]</text>
-    <text class="art" y="238" fill="#484f58" opacity="1">  ⬛ offense   ⬜ defense</text>
+    <text class="art" y="238" fill="#6e7681" opacity="1">  [#] offense   [~] defense</text>
   </g>
 
   <!-- info rows -->
@@ -78,7 +78,7 @@
     <text id="r10" class="row" y="352"><tspan class="k">Speaks</tspan><tspan class="v" x="110">FR · EN · ES</tspan></text>
     <text id="r11" class="row" y="378"><tspan class="k">Status</tspan><tspan class="danger" x="110">root@defense — ACCESS: GRANTED</tspan></text>
     <text id="sep2" class="row dim" y="404">───────────────────────────────</text>
-    <g id="pal" class="row" transform="translate(0,422)">
+    <g transform="translate(0,414)"><g id="pal" class="row">
       <rect x="0"   width="22" height="12" fill="#161b22"/>
       <rect x="26"  width="22" height="12" fill="#0e4429"/>
       <rect x="52"  width="22" height="12" fill="#006d32"/>
@@ -87,7 +87,7 @@
       <rect x="130" width="22" height="12" fill="#69f0a0"/>
       <rect x="160" width="22" height="12" fill="#ff2d55"/>
       <rect x="186" width="22" height="12" fill="#ffbd2e"/>
-    </g>
+    </g></g>
     <text id="mot" class="row motto" y="458">"I know how they break because I build the defenses."<tspan id="cur" fill="#39d353"> ▋</tspan></text>
   </g>
 
