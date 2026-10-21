@@ -1,67 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 220" width="860" height="220" role="img" aria-label="L3L3UR3 intrusion banner">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 392" width="860" height="392" role="img" aria-label="L3L3UR3 — system breached">
   <defs>
     <style>
-      @keyframes wipe   { from{transform:translateX(0);} to{transform:translateX(900px);} }
-      @keyframes blink  { 0%,49%{opacity:1;} 50%,100%{opacity:0;} }
-      @keyframes glitchR{ 0%,88%,100%{opacity:0;transform:translate(0,0);} 89%{opacity:.9;transform:translate(4px,-3px);} 92%{opacity:.7;transform:translate(-3px,2px);} 95%{opacity:.5;transform:translate(2px,1px);} }
-      @keyframes glitchC{ 0%,86%,100%{opacity:0;transform:translate(0,0);} 87%{opacity:.9;transform:translate(-4px,3px);} 91%{opacity:.6;transform:translate(3px,-2px);} }
-      @keyframes slice  { 0%,90%,100%{opacity:0;transform:translateX(0);} 91%{opacity:1;transform:translateX(-6px);} 93%{opacity:1;transform:translateX(8px);} 95%{opacity:0;} }
-      @keyframes flick  { 0%,97%,100%{opacity:0;} 98%{opacity:.08;} 99%{opacity:.02;} }
-      @keyframes warn   { 0%,60%{opacity:1;} 61%,100%{opacity:.15;} }
-      @keyframes subin  { from{opacity:0;} to{opacity:1;} }
-      @keyframes pulse  { 0%,100%{opacity:.55;} 50%{opacity:1;} }
-      .title{ font:700 78px "Courier New",ui-monospace,monospace; letter-spacing:4px; }
-      .sub  { font:400 17px "Courier New",ui-monospace,monospace; }
-      .warn { font:700 15px "Courier New",ui-monospace,monospace; letter-spacing:2px; }
-      .chrome{ font:400 12px "Courier New",ui-monospace,monospace; fill:#8b949e; }
-      #wipe{ animation:wipe 1.3s cubic-bezier(.7,0,.3,1) .3s forwards; }
-      #gr  { animation:glitchR 2.6s steps(1) 1.6s infinite; }
-      #gc  { animation:glitchC 2.6s steps(1) 1.6s infinite; }
-      #slice{ animation:slice 3.3s steps(1) 2s infinite; }
-      #flick{ animation:flick 3s steps(1) infinite; }
-      #sub { opacity:0; animation:subin .5s ease 1.5s forwards; }
-      #warnline{ opacity:0; animation:subin .3s steps(1) 1.6s forwards, warn 1.1s steps(1) 1.9s infinite; }
-      #cur { animation:blink 1s steps(1) infinite; }
+      @keyframes flashout { 0%{opacity:1;} 12%{opacity:1;} 100%{opacity:0;} }
+      @keyframes slam     { 0%{transform:scale(1.14);opacity:0;} 10%{opacity:1;} 55%{transform:scale(.985);} 100%{transform:scale(1);opacity:1;} }
+      @keyframes flick    { 0%,93%,100%{opacity:0;} 94%{opacity:.10;} 96%{opacity:.03;} 98%{opacity:.08;} }
+      @keyframes strobe   { 0%,96%,100%{opacity:0;} 97%{opacity:.22;} 98%{opacity:0;} 99%{opacity:.16;} }
+      @keyframes eyepulse { 0%,100%{opacity:.75;} 50%{opacity:1;} }
+      @keyframes corepulse{ 0%,100%{opacity:.5;} 50%{opacity:.95;} }
+      @keyframes blink    { 0%,58%{opacity:1;} 59%,100%{opacity:.32;} }
+      @keyframes curblink { 0%,49%{opacity:1;} 50%,100%{opacity:0;} }
+      @keyframes glitchR  { 0%,90%,100%{opacity:0;transform:translate(0,0);} 91%{opacity:.9;transform:translate(5px,-3px);} 94%{opacity:.6;transform:translate(-4px,2px);} }
+      @keyframes glitchC  { 0%,88%,100%{opacity:0;transform:translate(0,0);} 89%{opacity:.9;transform:translate(-5px,3px);} 93%{opacity:.5;transform:translate(3px,-2px);} }
+      @keyframes drip     { 0%{transform:scaleY(0);} 8%{transform:scaleY(0);} 55%{transform:scaleY(1);} 90%{transform:scaleY(1);opacity:1;} 100%{transform:scaleY(1);opacity:0;} }
+      @keyframes titin    { from{opacity:0;} to{opacity:1;} }
+      .bone  { font:700 14px "Courier New",ui-monospace,monospace; fill:#c9d2d6; white-space:pre; letter-spacing:0; }
+      .skull { animation: slam 1s cubic-bezier(.2,.8,.2,1) .18s both; transform-origin:130px 150px; transform-box:fill-box; }
+      .eye    { animation: eyepulse 1.25s ease-in-out infinite; }
+      .eyecore{ animation: corepulse 1.25s ease-in-out infinite; }
+      .drip   { transform-origin: top; animation: drip 5s ease-in infinite; }
+      .title { font:800 58px "Courier New",ui-monospace,monospace; letter-spacing:2px; }
+      .breach{ font:800 20px "Courier New",ui-monospace,monospace; letter-spacing:3px; }
+      .meta  { font:400 16px "Courier New",ui-monospace,monospace; }
+      .chrome{ font:400 12px "Courier New",ui-monospace,monospace; }
+      #gr{ animation:glitchR 2.4s steps(1) 1.3s infinite; } #gc{ animation:glitchC 2.4s steps(1) 1.3s infinite; }
+      #breach{ animation: titin .2s steps(1) 1.2s both, blink 1s steps(1) 1.4s infinite; }
+      #watch { opacity:0; animation: titin .4s ease 1.6s forwards; }
+      #cur{ animation:curblink 1s steps(1) infinite; }
+      #flash{ animation: flashout .55s ease-out .05s both; }
+      #strobe{ animation: strobe 5.5s steps(1) 3s infinite; }
+      #flick{ animation: flick 2.3s steps(1) infinite; }
     </style>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <radialGradient id="vig" cx="50%" cy="46%" r="75%">
+      <stop offset="40%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#4a0010" stop-opacity="0.9"/>
+    </radialGradient>
+    <filter id="eyeglow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <pattern id="scan" width="3" height="3" patternUnits="userSpaceOnUse">
-      <rect width="3" height="1.3" y="0" fill="#000000" opacity="0.5"/>
-    </pattern>
+    <pattern id="scan" width="3" height="3" patternUnits="userSpaceOnUse"><rect width="3" height="1.4" fill="#000" opacity="0.55"/></pattern>
   </defs>
 
-  <rect x="1" y="1" width="858" height="218" rx="14" fill="#07090c" stroke="#3d1114" stroke-width="1.5"/>
+  <rect x="0" y="0" width="860" height="392" rx="14" fill="#05070a"/>
+  <rect x="0" y="0" width="860" height="392" rx="14" fill="url(#vig)"/>
 
-  <!-- window chrome -->
-  <rect x="1" y="1" width="858" height="34" rx="14" fill="#120609"/>
-  <rect x="1" y="20" width="858" height="15" fill="#120609"/>
-  <circle cx="24" cy="18" r="6" fill="#ff5f56"/>
-  <circle cx="44" cy="18" r="6" fill="#ffbd2e"/>
-  <circle cx="64" cy="18" r="6" fill="#27c93f"/>
-  <text x="430" y="22" text-anchor="middle" class="chrome">root@blackbox — // intrusion in progress</text>
-  <line x1="1" y1="35" x2="859" y2="35" stroke="#3d1114" stroke-width="1"/>
+  <!-- status line -->
+  <circle cx="22" cy="20" r="5" fill="#ff1326"/>
+  <text x="38" y="25" class="chrome" fill="#ff4d60">root@blackbox: ~ // 1 intruder detected — trace active</text>
+  <line x1="0" y1="40" x2="860" y2="40" stroke="#3d0b12" stroke-width="1"/>
 
-  <!-- title + glitch -->
-  <g transform="translate(40,128)">
-    <text id="gc" class="title" fill="#2de2e6">L3L3UR3</text>
-    <text id="gr" class="title" fill="#ff2d55">L3L3UR3</text>
-    <text id="slice" class="title" fill="#ff2d55" opacity="0">L3L3UR3</text>
-    <text class="title" fill="#39d353" filter="url(#glow)">L3L3UR3</text>
+  <!-- skull -->
+  <g transform="translate(48,94)"><g class="skull">
+    <text class="bone" x="0" y="0">          __________          </text>
+    <text class="bone" x="0" y="18">       .-'          '-.       </text>
+    <text class="bone" x="0" y="36">      /                \      </text>
+    <text class="bone" x="0" y="54">     /                  \     </text>
+    <text class="bone" x="0" y="72">    |   .------..------.   |   </text>
+    <text class="bone" x="0" y="90">    |  /        \        \  |  </text>
+    <text class="bone" x="0" y="108">    | |         ||         | | </text>
+    <text class="bone" x="0" y="126">    | |         ||         | | </text>
+    <text class="bone" x="0" y="144">    |  \        /\        /  |  </text>
+    <text class="bone" x="0" y="162">    |   '------'  '------'   |  </text>
+    <text class="bone" x="0" y="180">    |          /\/\          |  </text>
+    <text class="bone" x="0" y="198">     \         \  /         /   </text>
+    <text class="bone" x="0" y="216">      \         \/         /    </text>
+    <text class="bone" x="0" y="234">       '.                .'     </text>
+    <text class="bone" x="0" y="252">         '.            .'       </text>
+    <text class="bone" x="0" y="270">           |  |  |  |  |        </text>
+    <text class="bone" x="0" y="288">           |__|__|__|__|        </text>
+  <circle class="eye" cx="96.9" cy="103.4" r="11" fill="#ff0a1e" filter="url(#eyeglow)"/>
+  <circle class="eyecore" cx="96.9" cy="103.4" r="4" fill="#ffd0d0"/>
+  <circle class="eye" cx="189.6" cy="103.4" r="11" fill="#ff0a1e" filter="url(#eyeglow)"/>
+  <circle class="eyecore" cx="189.6" cy="103.4" r="4" fill="#ffd0d0"/>
+  <g class="drip" style="animation-delay:2.5s" transform="translate(96.9,112.4)"><rect x="-1.1" y="0" width="2.2" height="34" fill="#9e0010"/><circle cx="0" cy="34" r="2.6" fill="#ff1326"/></g>
+  <g class="drip" style="animation-delay:3.8s" transform="translate(189.6,112.4)"><rect x="-1.1" y="0" width="2.2" height="34" fill="#9e0010"/><circle cx="0" cy="34" r="2.6" fill="#ff1326"/></g>
+  </g></g>
+
+  <!-- right block -->
+  <g transform="translate(430,0)">
+    <g transform="translate(0,170)">
+      <text id="gc" class="title" fill="#19d3e6">L3L3UR3</text>
+      <text id="gr" class="title" fill="#8a0012">L3L3UR3</text>
+      <text class="title" fill="#ff0a1e" filter="url(#eyeglow)">L3L3UR3</text>
+    </g>
+    <text id="breach" class="breach" x="2" y="212" fill="#ff1326">&#9888; SYSTEM BREACHED</text>
+    <text id="watch" class="meta" x="2" y="246" fill="#8a929a">// you are being watched<tspan id="cur" fill="#ff1326">_</tspan></text>
+    <text class="meta" x="2" y="276" fill="#5a636b">offensive security · OSINT · grey hat</text>
   </g>
 
-  <!-- reveal wipe + printing cursor -->
-  <g id="wipe">
-    <rect x="40" y="56" width="620" height="92" fill="#07090c"/>
-    <rect x="36" y="56" width="4" height="92" fill="#39d353"/>
-  </g>
-
-  <!-- red intrusion warning -->
-  <text id="warnline" x="42" y="170" class="warn" fill="#ff2d55">⚠ UNAUTHORIZED ACCESS — INTRUSION LOGGED</text>
-  <!-- subtitle -->
-  <text id="sub" x="42" y="198" class="sub" fill="#7ee787">// offensive security · OSINT · grey hat<tspan id="cur" fill="#39d353"> ▋</tspan></text>
-
-  <!-- CRT overlays -->
-  <rect x="1" y="35" width="858" height="184" fill="url(#scan)" pointer-events="none"/>
-  <rect id="flick" x="1" y="1" width="858" height="218" rx="14" fill="#39d353" opacity="0" pointer-events="none"/>
+  <!-- overlays -->
+  <rect x="0" y="40" width="860" height="352" fill="url(#scan)" pointer-events="none"/>
+  <rect id="strobe" opacity="0" x="0" y="0" width="860" height="392" rx="14" fill="#ff0012" pointer-events="none"/>
+  <rect id="flick" opacity="0" x="0" y="0" width="860" height="392" rx="14" fill="#ff1a2e" pointer-events="none"/>
+  <rect id="flash" opacity="0" x="0" y="0" width="860" height="392" rx="14" fill="#ff0010" pointer-events="none"/>
 </svg>

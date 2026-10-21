@@ -8,15 +8,15 @@
       @keyframes flick{ 0%,96%,100%{opacity:0;} 97%{opacity:.07;} 98%{opacity:.02;} 99%{opacity:.05;} }
       @keyframes warn { 0%,55%{opacity:1;} 56%,100%{opacity:.2;} }
       .chrome{ font:400 12px "Courier New",ui-monospace,monospace; fill:#8b949e; }
-      .art { font:700 14px "Courier New",ui-monospace,monospace; fill:#2ea043; white-space:pre; opacity:0; animation:artin .8s ease .2s forwards; }
+      .art { font:700 14px "Courier New",ui-monospace,monospace; fill:#b9c2c6; white-space:pre; opacity:0; animation:artin .8s ease .2s forwards; }
       .row { font:400 15px "Courier New",ui-monospace,monospace; opacity:0; animation:rowin .5s cubic-bezier(.2,.7,.3,1) forwards; }
-      .k   { fill:#39d353; font-weight:700; }
-      .v   { fill:#adbac7; }
-      .hdr { fill:#7ee787; font-weight:700; }
-      .dim { fill:#30363d; }
+      .k   { fill:#ff3b4e; font-weight:700; }
+      .v   { fill:#c3ccd0; }
+      .hdr { fill:#ff6b78; font-weight:700; }
+      .dim { fill:#3d1114; }
       .danger{ fill:#ff2d55; font-weight:700; }
-      .eye { fill:#ff2d55; animation:pulse 1.3s ease-in-out infinite; }
-      .motto{ font:italic 400 15px "Courier New",ui-monospace,monospace; fill:#7ee787; }
+      .eye { fill:#ff0a1e; animation:pulse 1.2s ease-in-out infinite; }
+      .motto{ font:italic 400 15px "Courier New",ui-monospace,monospace; fill:#9aa2aa; }
       #cur { animation:blink 1s steps(1) infinite; }
       #threat{ animation:warn 1.1s steps(1) infinite; }
       #h{animation-delay:.25s;} #sep1{animation-delay:.3s;}
@@ -26,15 +26,20 @@
       #r10{animation-delay:1.10s;} #r11{animation-delay:1.18s;}
       #sep2{animation-delay:1.26s;} #pal{animation-delay:1.34s;} #mot{animation-delay:1.44s;}
     </style>
-    <filter id="eyeglow" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="eyeglow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="3.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <radialGradient id="vig" cx="34%" cy="42%" r="80%">
+      <stop offset="45%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#4a0010" stop-opacity="0.85"/>
+    </radialGradient>
     <pattern id="scan" width="3" height="3" patternUnits="userSpaceOnUse">
       <rect width="3" height="1.3" fill="#000000" opacity="0.45"/>
     </pattern>
   </defs>
 
-  <rect x="1" y="1" width="858" height="468" rx="14" fill="#07090c" stroke="#3d1114" stroke-width="1.5"/>
+  <rect x="1" y="1" width="858" height="468" rx="14" fill="#05070a" stroke="#3d1114" stroke-width="1.5"/>
+  <rect x="1" y="1" width="858" height="468" rx="14" fill="url(#vig)"/>
   <rect x="1" y="1" width="858" height="34" rx="14" fill="#120609"/>
   <rect x="1" y="20" width="858" height="15" fill="#120609"/>
   <circle cx="24" cy="18" r="6" fill="#ff5f56"/>
