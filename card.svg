@@ -45,19 +45,18 @@
 
   <!-- ASCII skull with glowing red eyes -->
   <g transform="translate(40,70)" xml:space="preserve">
-    <text class="art" y="0">        .-"""""-.</text>
-    <text class="art" y="18">      .'         '.</text>
-    <text class="art" y="36">     /   _     _   \</text>
-    <text class="art" y="54">    |               |</text>
-    <text class="art" y="72">    |       &lt;       |</text>
-    <text class="art" y="90">    |   \  \_/  /   |</text>
-    <text class="art" y="108">     \   '._.'    /</text>
+    <text class="art" y="0">        .-"""""""-.</text>
+    <text class="art" y="18">      .'           '.</text>
+    <text class="art" y="36">     /   .-.   .-.   \</text>
+    <text class="art" y="54">    :   (   ) (   )   :</text>
+    <text class="art" y="72">    |    '-'   '-'    |</text>
+    <text class="art" y="90">    :        ^        :</text>
+    <text class="art" y="108">     \     \___/     /</text>
     <text class="art" y="126">      '.         .'</text>
-    <text class="art" y="144">        '-.___.-'</text>
-    <text class="art" y="162">       | | | | | |</text>
-    <text class="art" y="180">       '-'-'-'-'-'</text>
-    <circle class="eye" cx="76"  cy="119" r="6" fill="#ff2d55" filter="url(#eyeglow)"/>
-    <circle class="eye" cx="135" cy="119" r="6" fill="#ff2d55" filter="url(#eyeglow)"/>
+    <text class="art" y="144">         | | | | |</text>
+    <text class="art" y="162">         '-'-'-'-'</text>
+    <circle class="eye" cx="84"  cy="50" r="5.5" fill="#ff2d55" filter="url(#eyeglow)"/>
+    <circle class="eye" cx="135" cy="50" r="5.5" fill="#ff2d55" filter="url(#eyeglow)"/>
     <text id="threat" class="art" y="212" fill="#ff2d55" opacity="1">    [ THREAT ACTOR DETECTED ]</text>
     <text class="art" y="238" fill="#6e7681" opacity="1">  [#] offense   [~] defense</text>
   </g>
